@@ -2,6 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config| 
+  config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.define "dev" do |d|
     d.vm.box = "drajen/freenas9"
     d.vm.hostname = "dev" 
